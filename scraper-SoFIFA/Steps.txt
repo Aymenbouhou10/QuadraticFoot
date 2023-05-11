@@ -1,0 +1,3 @@
+Open terminal:
+	cd C:/Users/AymenBouhou/Desktop/QuadraticFoot/scraper-SoFIFA/src/
+	scrapy crawl sofifa -o out.csv -t csv -a year=22
