@@ -12,7 +12,7 @@ for year in years:
     varname = 'FIFA' + year
     
     # Import the dataset and assign it to the variable
-    exec(f"{varname} = pd.read_csv('../Data/Fifa{filename}')")
+    exec(f"{varname} = pd.read_csv('../Data/Fifa/{filename}')")
 
     exec(f"{varname}['Version'] = '{varname}'")
 
@@ -20,7 +20,7 @@ for year in years:
 
 years = [str(year) for year in range(2018, 2024)]
 
-df = FIFA2017
+df = pd.read_csv('../Data/Fifa/2017.csv')
 
 for year in years:
   varname = 'FIFA' + year
