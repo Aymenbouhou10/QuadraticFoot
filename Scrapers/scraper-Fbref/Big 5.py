@@ -37,3 +37,6 @@ for season in ['2017-2018']:
 results = pd.concat([df for x, df in season_dfs.items()])
 results = results.drop_duplicates()
 results = results.reset_index(drop=True)
+
+
+https://fbref.com/en/comps/Big5/2017-2018/stats/players2017-2018-Big-5-European-Leagues-Stats
