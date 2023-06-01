@@ -3,7 +3,7 @@ import requests
 import re
 
 season_dfs = {}
-#['2017-2018', '2018-2019', '2019-2020', '2020-2021']
+#['2017-2018', '2018-2019', '2019-2020', '2020-2021',2021-2022]
 for season in ['2017-2018']:
     url = f'https://fbref.com/en/comps/Big5/{season}/stats/players/{season}-Big-5-European-Leagues-Stats'
     res = requests.get(url).text
@@ -37,6 +37,3 @@ for season in ['2017-2018']:
 results = pd.concat([df for x, df in season_dfs.items()])
 results = results.drop_duplicates()
 results = results.reset_index(drop=True)
-
-
-https://fbref.com/en/comps/Big5/2017-2018/stats/players2017-2018-Big-5-European-Leagues-Stats
