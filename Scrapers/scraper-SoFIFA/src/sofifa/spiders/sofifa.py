@@ -44,7 +44,7 @@ class SofifaSpider(scrapy.Spider):
             item = {
                 "sofifa_id": player.css("td.col-pi::text").get(),
                 "player_url": player.css("td:nth-child(2) a::attr(href)").get(),
-                "short_name": player.css("td:nth-child(2) a div.ellipsis::text").get(),
+                "short_name": player.css("td:nth-child(2) a::attr(aria-label)").get(),
                 "age": player.css("td.col-ae::text").get(),
                 "height": player.css("td.col-hi::text").get(),
                 "nationality": player.css(
